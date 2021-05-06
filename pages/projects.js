@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import BlogCards from "../components/BlogCards";
-import CTA from "../components/CTA";
-import Features from "../components/Features";
-import Herosection from "../components/Herosection";
+import Header from "../components/Header";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -14,10 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Herosection />
-        <Features />
-        <BlogCards />
-        <CTA />
+        <Header />
+        <Projects />
       </main>
     </div>
   );
