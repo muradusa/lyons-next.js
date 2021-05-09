@@ -209,10 +209,10 @@ export default function Herosection() {
                     Projects
                   </a>
                   <a
-                    href="#"
+                    href="/about"
                     className="text-base font-medium text-gray-500 hover:text-gray-900"
                   >
-                    Docs
+                    About
                   </a>
 
                   <Popover className="relative">
@@ -318,7 +318,7 @@ export default function Herosection() {
                     Careers
                   </a>
                   <a
-                    href="#contact"
+                    href="contact"
                     className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                   >
                     Contact
