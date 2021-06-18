@@ -50,13 +50,13 @@ const files = [
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
   },
   {
-    title: "Ygnacio VIllage",
+    title: "FM Indusstries",
     size: "3.9 MB",
     source:
       "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623889912/Lyons/2021-06-09_LyonsConstruction_FMIndustriesDJI_0588_LRG_x5dvq9.jpg",
   },
   {
-    title: "FM Industries",
+    title: "Ygnacio Valley",
     size: "3.9 MB",
     source:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
