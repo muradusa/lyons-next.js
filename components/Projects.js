@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const files = [
   {
@@ -53,7 +54,7 @@ const files = [
     title: "FM Indusstries",
     size: "3.9 MB",
     source:
-      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623889912/Lyons/2021-06-09_LyonsConstruction_FMIndustriesDJI_0588_LRG_x5dvq9.jpg",
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820276/samples/ecommerce/analog-classic.jpg",
   },
   {
     title: "Ygnacio Valley",
@@ -88,10 +89,11 @@ export default function Projects() {
           <Link href={`/projects/${file.title}`}>
             <a>
               <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
-                <img
+                <Image
                   src={file.source}
                   alt=""
                   className="object-cover pointer-events-none group-hover:opacity-75"
+                  layout="fill"
                 />
                 <button
                   type="button"
