@@ -14,7 +14,7 @@ export default function handler(req, res) {
       prefix: "samples/animals", // add your folder
     },
     function (error, result) {
-      // console.log(result.resources);
+      console.log(result.resources);
       res.status(200).json(result.resources);
     }
   );

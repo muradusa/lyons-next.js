@@ -77,20 +77,27 @@ const files = [
 
   // More files...
 ];
+export async function getStaticProps() {
+  const res = await fetch(`http://localhost:3000/api`);
+  const projects = await res.json();
 
-export default function Projects() {
+  // Pass post data to the page via props
+  return { props: { projects } };
+}
+
+export default function Projects(projects) {
   return (
     <ul
       role="list"
       className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8 p-5"
     >
-      {files.map((file) => (
-        <li key={file.source} className="relative">
-          <Link href={`/projects/${file.title}`}>
+      {projects?.map((project) => (
+        <li key={project.asset_id} className="relative">
+          <Link href={`/projects/${project.asset_id}`}>
             <a>
               <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
                 <Image
-                  src={file.source}
+                  src={project.url}
                   alt=""
                   className="object-cover pointer-events-none group-hover:opacity-75"
                   layout="fill"
@@ -99,18 +106,20 @@ export default function Projects() {
                   type="button"
                   className="absolute inset-0 focus:outline-none"
                 >
-                  <span className="sr-only">View details for {file.title}</span>
+                  <span className="sr-only">
+                    View details for {project.public_id}
+                  </span>
                 </button>
               </div>
             </a>
           </Link>
 
           <p className="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">
-            {file.title}
+            {project.public_id}
           </p>
-          <p className="block text-sm font-medium text-gray-500 pointer-events-none">
+          {/* <p className="block text-sm font-medium text-gray-500 pointer-events-none">
             {file.size}
-          </p>
+          </p> */}
         </li>
       ))}
     </ul>

@@ -1,9 +1,9 @@
 import React from "react";
 
-function Project(post) {
+function Project(project) {
   return (
     <div>
-      <p>{post.url}</p>
+      <p>{project.url}</p>
     </div>
   );
 }
@@ -11,12 +11,12 @@ function Project(post) {
 // This function gets called at build time
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
-  const res = await fetch(`${process.env.NEXT_URL}/api`);
-  const posts = await res.json();
+  const res = await fetch(`http://localhost:3000/api`);
+  const projects = await res.json();
 
   // Get the paths we want to pre-render based on posts
-  const paths = posts.map((post) => ({
-    params: { id: post.id.toString() },
+  const paths = projects.map((project) => ({
+    params: { id: project.asset_id.toString() },
   }));
 
   // We'll pre-render only these paths at build time.
@@ -28,11 +28,11 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`${process.env.NEXT_URL}/api/${params.id}`);
-  const post = await res.json();
+  const res = await fetch(`http://localhost:3000/api/${params.id}`);
+  const project = await res.json();
 
   // Pass post data to the page via props
-  return { props: { post } };
+  return { props: { project } };
 }
 
 export default Project;
