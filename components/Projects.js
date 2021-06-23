@@ -77,7 +77,7 @@ const files = [
   // More files...
 ];
 
-export default function Projects() {
+export default function Projects(props) {
   return (
     <ul
       role="list"
@@ -113,4 +113,10 @@ export default function Projects() {
       ))}
     </ul>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {},
+  };
 }
