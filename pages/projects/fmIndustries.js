@@ -1,4 +1,6 @@
 import ImageGallery from "react-image-gallery";
+// @import "~react-image-gallery/styles/css/image-gallery.css"
+// https://medium.com/@patrickjbradley/support-for-the-experimental-syntax-decorators-legacy-isn-t-currently-enabled-f69206bade39
 
 const images = [
   {
