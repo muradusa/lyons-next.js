@@ -23,5 +23,3 @@ function fm_industries() {
 
 export default fm_industries;
 
-
-//Delete later
