@@ -20,7 +20,7 @@ const files = [
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
   },
   {
-    title: "LIvermore Lab",
+    title: "Livermore Lab",
     size: "3.9 MB",
     source:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
@@ -53,7 +53,7 @@ const files = [
     title: "FM Indusstries",
     size: "3.9 MB",
     source:
-      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623889912/Lyons/2021-06-09_LyonsConstruction_FMIndustriesDJI_0588_LRG_x5dvq9.jpg",
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_scale,w_2183/v1623889912/Lyons/FM%20Industries/FM.jpg",
   },
   {
     title: "Ygnacio Valley",
@@ -89,6 +89,7 @@ export default function Projects(props) {
             <a>
               <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
                 <img
+                  loading="lazy"
                   src={file.source}
                   alt=""
                   className="object-cover pointer-events-none group-hover:opacity-75"
@@ -115,8 +116,8 @@ export default function Projects(props) {
   );
 }
 
-export async function getStaticProps(context) {
-  return {
-    props: {},
-  };
-}
+// export async function getStaticProps(context) {
+//   return {
+//     props: {},
+//   };
+// }
