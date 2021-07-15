@@ -1,12 +1,16 @@
-// import React from "react";
+import React from "react";
+import { useRouter } from "next/dist/client/router";
 
-// function Project() {
-//   return (
-//     <div>
-//       <p>Hello this is slug.js</p>
-//     </div>
-//   );
-// }
+function Project() {
+  const router = useRouter();
+  const { slug } = router.query;
+
+  return (
+    <div>
+      <p>Hello this is slug.js</p>
+    </div>
+  );
+}
 
 // // This function gets called at build time
 // export async function getStaticPaths() {
@@ -35,4 +39,4 @@
 //   return { props: { project } };
 // }
 
-// export default Project;
+export default Project;
