@@ -9,6 +9,4 @@ function sample() {
   );
 }
 
-// delete later
-
 export default sample;
