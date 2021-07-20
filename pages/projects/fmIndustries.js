@@ -1,20 +1,17 @@
 import ImageGallery from "react-image-gallery";
-import "./style.css";
-// @import "~react-image-gallery/styles/css/image-gallery.css";
-// https://medium.com/@patrickjbradley/support-for-the-experimental-syntax-decorators-legacy-isn-t-currently-enabled-f69206bade39
 
 const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    original:
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820286/samples/landscapes/nature-mountains.jpg",
+    thumbnail:
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820286/samples/landscapes/nature-mountains.jpg",
   },
   {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820280/samples/bike.jpg",
+    thumbnail:
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820280/samples/bike.jpg",
   },
 ];
 

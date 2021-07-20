@@ -7,7 +7,7 @@ function Project() {
 
   return (
     <div>
-      <p>Hello this is slug.js</p>
+      <p>Hello this is {slug}</p>
     </div>
   );
 }
