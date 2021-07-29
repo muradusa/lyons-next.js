@@ -1,55 +1,47 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
+import _ from "lodash";
+import axios from "axios";
 
 import ImageGallery from "react-image-gallery";
 import Image from "next/image";
 
-// const projects = {
-//   cupertino: [
-//     {
-//       original:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_scale,w_2500/v1623820286/samples/landscapes/nature-mountains.webp",
-//       thumbnail:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820286/samples/landscapes/nature-mountains.webp",
-//     },
-//     {
-//       original:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_scale,w_2500/v1626796077/Lyons/FM%20Industries/Lyons_FM_Industries_FM-c_scale_w_2183_yz5cwt.webp",
-//       thumbnail:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1626796077/Lyons/FM%20Industries/Lyons_FM_Industries_FM-c_scale_w_2183_yz5cwt.webp",
-//     },
-//   ],
-//   livermore: [
-//     {
-//       original:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820284/samples/ecommerce/accessories-bag.jpg",
-//       thumbnail:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820284/samples/ecommerce/accessories-bag.jpg",
-//     },
-//     {
-//       original:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820284/samples/ecommerce/leather-bag-gray.jpg",
-//       thumbnail:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820284/samples/ecommerce/leather-bag-gray.jpg",
-//     },
-//     {
-//       original:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820276/samples/ecommerce/analog-classic.jpg",
+const projects = {
+  cupertino: [
+    {
+      original:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_scale,w_2500/v1623820286/samples/landscapes/nature-mountains.webp",
+      thumbnail:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820286/samples/landscapes/nature-mountains.webp",
+    },
+    {
+      original:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_scale,w_2500/v1626796077/Lyons/FM%20Industries/Lyons_FM_Industries_FM-c_scale_w_2183_yz5cwt.webp",
+      thumbnail:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1626796077/Lyons/FM%20Industries/Lyons_FM_Industries_FM-c_scale_w_2183_yz5cwt.webp",
+    },
+  ],
+  livermore: [
+    {
+      original:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820284/samples/ecommerce/accessories-bag.jpg",
+      thumbnail:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820284/samples/ecommerce/accessories-bag.jpg",
+    },
+    {
+      original:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820284/samples/ecommerce/leather-bag-gray.jpg",
+      thumbnail:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820284/samples/ecommerce/leather-bag-gray.jpg",
+    },
+    {
+      original:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1623820276/samples/ecommerce/analog-classic.jpg",
 
-//       thumbnail:
-//         "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820276/samples/ecommerce/analog-classic.jpg",
-//     },
-//   ],
-// };
-
-const full = function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
+      thumbnail:
+        "https://res.cloudinary.com/dz7rkbzdw/image/upload/c_thumb,w_200/v1623820276/samples/ecommerce/analog-classic.jpg",
+    },
+  ],
 };
 
 function Project({ project }) {
@@ -76,7 +68,7 @@ function Project({ project }) {
               <Image
                 src={photo.url}
                 layout="fill"
-                onClick={full}
+                // onClick={handle.enter}
                 className="object-cover  group-hover:opacity-75 cursor-pointer"
               />
             </div>
