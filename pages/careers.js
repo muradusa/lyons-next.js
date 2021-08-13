@@ -18,7 +18,7 @@ export default function careers() {
           title="Careers"
           description="Are you looking for exciting opportunities. You are at the right place "
         />
-        <CTA />
+
         <Joblist />
       </main>
     </div>
