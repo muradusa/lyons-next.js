@@ -1,15 +1,15 @@
 /* This example requires Tailwind CSS v2.0+ */
 const posts = [
   {
-    title: "Boost your conversion rate",
-    href: "#",
-    category: { name: "Article", href: "#" },
+    title: "Cupertino City Center",
+    href: "/projects/cupertino",
+    category: { name: "See More", href: "/projects/cupertino" },
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
     imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1627316662/Lyons/cupertino/9_lvkere.jpg",
     readingTime: "6 min",
     author: {
       name: "Roel Aufderehar",
@@ -19,15 +19,15 @@ const posts = [
     },
   },
   {
-    title: "How to use search engine optimization to drive sales",
-    href: "#",
-    category: { name: "Video", href: "#" },
+    title: "FM Industries",
+    href: "/projects/livermore",
+    category: { name: "See More", href: "#" },
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
     date: "Mar 10, 2020",
     datetime: "2020-03-10",
     imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1626827023/Lyons/livermore/2021-06-09_LyonsConstruction_FMIndustriesDJI_0591_LRG_ma4ndn.jpg",
     readingTime: "4 min",
     author: {
       name: "Brenna Goyette",
@@ -37,15 +37,15 @@ const posts = [
     },
   },
   {
-    title: "Improve your customer experience",
+    title: "UC Davis - Hawthorn",
     href: "#",
-    category: { name: "Case Study", href: "#" },
+    category: { name: "See more", href: "#" },
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
     date: "Feb 12, 2020",
     datetime: "2020-02-12",
     imageUrl:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+      "https://res.cloudinary.com/dz7rkbzdw/image/upload/v1626827026/Lyons/livermore/2021-06-09_LyonsConstruction_FMIndustriesDJI_0582_LRG_gtbzxl.jpg",
     readingTime: "11 min",
     author: {
       name: "Daniela Metz",
@@ -100,7 +100,7 @@ export default function BlogCards() {
                     </p>
                   </a>
                 </div>
-                <div className="mt-6 flex items-center">
+                {/* <div className="mt-6 flex items-center">
                   <div className="flex-shrink-0">
                     <a href={post.author.href}>
                       <span className="sr-only">{post.author.name}</span>
@@ -123,7 +123,7 @@ export default function BlogCards() {
                       <span>{post.readingTime} read</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
