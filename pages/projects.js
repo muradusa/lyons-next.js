@@ -15,6 +15,7 @@ export default function Home() {
         <Header
           title="Projects"
           description="Here are a few of our completed projects"
+          image="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80"
         />
         <Projects />
       </main>

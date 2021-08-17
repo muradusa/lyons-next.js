@@ -16,6 +16,7 @@ export default function Contact() {
         <Header
           title="About us"
           description="W.E. Lyons Construction is a family owned business."
+          image="https://images.unsplash.com/photo-1528686086515-695fb0f1ee0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80"
         />
         <Features_about />
         <Team />

@@ -17,6 +17,7 @@ export default function careers() {
         <Header
           title="Careers"
           description="Are you looking for exciting opportunities. You are at the right place "
+          image="https://images.unsplash.com/photo-1557425529-b1ae9c141e7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
         />
 
         <Joblist />
